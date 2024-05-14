@@ -1,8 +1,7 @@
 #!/bin/bash
 set -e
 
-# Login to Docker Hub
-docker login -u adrifok -p guate4718
+echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin
 
 # Pull the Docker image
 docker pull adrifok/simple-python-flask-app
