@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+chmod +x scripts/start_container.sh
+
 echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin
 
 # Pull the Docker image
